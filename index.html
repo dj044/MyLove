@@ -1,233 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For My Queen Jasleen</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-
-    <style>
-      body {
-        margin:0;
-        font-family: Georgia, "Times New Roman", serif;
-        background: linear-gradient(180deg,#fff6fb 0%,#fde8f3 45%,#f8d9ea 100%);
-      }
-
-      .royal-glow{
-        box-shadow:0 25px 70px rgba(214,128,170,.35);
-      }
-
-      .gold-border{
-        border:1px solid rgba(214,160,180,.5);
-      }
-    </style>
-  </head>
-
-  <body>
-    <div id="root"></div>
-
-    <script type="text/babel">
-      function App(){
-
-        const cards=[
-          {
-            icon:"🌸",
-            title:"Beautiful Soul",
-            text:"Your warmth and kindness create a peaceful energy wherever you go."
-          },
-          {
-            icon:"👑",
-            title:"Royal Grace",
-            text:"You carry elegance so naturally — confident, charming and unforgettable."
-          },
-          {
-            icon:"🐎",
-            title:"Storybook Romance",
-            text:"Like a Bridgerton dream — palace gardens, soft sunsets and a royal horse ride."
-          }
-        ];
-
-        const reasons=[
-          "You are awesome in the most natural way.",
-          "Your positivity makes everything brighter.",
-          "Your smile feels peaceful and magical.",
-          "You are gorgeous inside and out."
-        ];
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lady Jasleen — A Royal Tribute</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<style>
+body{
+margin:0;
+font-family: "Playfair Display", Georgia, serif;
+background: linear-gradient(180deg,#fff7fb 0%,#fde6f1 40%,#f8d2e6 100%);
+}
+
+.royal-card{
+box-shadow:0 30px 80px rgba(214,110,160,.35);
+}
 
-        return(
-          <div className="min-h-screen text-[#6a2c4f] relative overflow-hidden">
+.gold-border{
+border:1px solid rgba(214,170,200,.45);
+}
 
-            <div className="absolute inset-0 pointer-events-none">
-              <div className="absolute top-0 left-0 w-80 h-80 bg-pink-200/40 blur-3xl rounded-full"></div>
-              <div className="absolute top-40 right-0 w-96 h-96 bg-rose-200/40 blur-3xl rounded-full"></div>
-              <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-pink-300/30 blur-3xl rounded-full"></div>
-            </div>
+.bridgerton-title{
+letter-spacing:.08em;
+}
 
-            <main className="relative max-w-6xl mx-auto px-6 py-14">
+.fade-glow{
+filter:blur(90px);
+opacity:.35;
+}
 
-              <section className="grid lg:grid-cols-2 gap-10 items-center">
+</style>
+</head>
 
-                <div className="space-y-6">
+<body>
+<div id="root"></div>
 
-                  <div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/70 gold-border royal-glow">
-                    🌷 <span className="text-sm tracking-widest uppercase" style={{fontFamily:'Arial'}}>Happy Women's Day</span>
-                  </div>
+<script type="text/babel">
 
-                  <div>
-                    <p className="uppercase text-sm tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>For Jasleen</p>
+function App(){
 
-                    <h1 className="text-5xl md:text-7xl leading-tight mt-3">
-                      My <span className="italic text-pink-500">Royal</span> Queen
-                    </h1>
+const compliments=[
+"Your positivity brightens every room.",
+"Your smile feels warm and peaceful.",
+"Your elegance feels effortless.",
+"You are truly gorgeous inside and out."
+]
 
-                    <p className="text-lg mt-4 text-[#7a4b66]" style={{fontFamily:'Arial'}}>
-                      A small royal corner built for the woman who brings beauty,
-                      positivity and elegance into every moment of life.
-                    </p>
-                  </div>
+const cards=[
+{
+icon:"🌸",
+title:"Radiant Aura",
+text:"Your calm, warm and positive energy makes life feel lighter and happier."
+},
+{
+icon:"👑",
+title:"Royal Grace",
+text:"You carry yourself with a natural elegance that feels timeless and beautiful."
+},
+{
+icon:"🐎",
+title:"A Bridgerton Dream",
+text:"Like a story from a grand English estate — romance, gardens and a royal horse ride."
+}
+]
 
-                  <div className="flex gap-3 flex-wrap">
+return(
 
-                    <a href="#tribute" className="px-5 py-3 rounded-2xl bg-pink-500 text-white royal-glow no-underline" style={{fontFamily:'Arial'}}>
-                      Enter the Palace
-                    </a>
+<div className="min-h-screen text-[#6a2c4f] relative overflow-hidden">
 
-                    <a href="#ride" className="px-5 py-3 rounded-2xl bg-white/70 gold-border no-underline text-[#6a2c4f]" style={{fontFamily:'Arial'}}>
-                      Royal Ride
-                    </a>
+<div className="absolute inset-0 pointer-events-none">
+<div className="absolute top-0 left-0 w-96 h-96 bg-pink-300 rounded-full fade-glow"></div>
+<div className="absolute top-40 right-0 w-96 h-96 bg-rose-300 rounded-full fade-glow"></div>
+<div className="absolute bottom-0 left-1/3 w-[500px] h-[500px] bg-pink-200 rounded-full fade-glow"></div>
+</div>
 
-                  </div>
+<main className="relative max-w-6xl mx-auto px-6 py-16">
 
-                </div>
+<section className="grid lg:grid-cols-2 gap-10 items-center">
 
+<div className="space-y-6">
 
-                <div className="rounded-[2rem] p-4 gold-border bg-white/60 royal-glow">
+<div className="inline-flex items-center gap-2 rounded-full px-4 py-2 bg-white/70 gold-border royal-card">
+<span>🌷</span>
+<span className="text-sm uppercase tracking-widest" style={{fontFamily:'Arial'}}>Happy Women's Day</span>
+</div>
 
-                  <div className="rounded-[1.5rem] p-8 bg-gradient-to-br from-pink-200 via-rose-200 to-pink-300 min-h-[420px] flex flex-col justify-between">
+<div>
+<p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>For Lady Jasleen</p>
 
-                    <div>
-                      <div className="flex justify-between uppercase text-xs tracking-widest" style={{fontFamily:'Arial'}}>
-                        <span>Royal Note</span>
-                        <span>2026</span>
-                      </div>
+<h1 className="text-5xl md:text-7xl mt-3 bridgerton-title">
+My <span className="italic text-pink-500">Royal</span> Queen
+</h1>
 
-                      <div className="text-center mt-10">
-                        <div className="text-6xl">👑</div>
-                        <h2 className="text-4xl mt-4">Lady Jasleen</h2>
+<p className="mt-4 text-lg text-[#7a4b66]" style={{fontFamily:'Arial'}}>
+A small royal page inspired by the charm and elegance of Bridgerton — created for the woman whose beauty and positive aura make life feel magical.
+</p>
 
-                        <p className="mt-4 text-[#6a2c4f]" style={{fontFamily:'Arial'}}>
-                          A beautiful woman with a glowing positive aura — someone who makes life feel joyful and bright.
-                        </p>
-                      </div>
-                    </div>
+</div>
 
-                    <div className="bg-white/70 rounded-xl p-4 gold-border">
-                      <p className="italic text-center" style={{fontFamily:'Arial'}}>
-                        "May your life always feel like a royal garden ride — peaceful, beautiful and full of love."
-                      </p>
-                    </div>
+<div className="flex gap-3 flex-wrap">
 
-                  </div>
+<a href="#tribute" className="px-5 py-3 rounded-2xl bg-pink-500 text-white royal-card no-underline" style={{fontFamily:'Arial'}}>
+Enter the Palace
+</a>
 
-                </div>
+<a href="#ride" className="px-5 py-3 rounded-2xl bg-white/70 gold-border no-underline text-[#6a2c4f]" style={{fontFamily:'Arial'}}>
+Royal Garden Ride
+</a>
 
-              </section>
+</div>
 
+</div>
 
-              <section id="tribute" className="mt-24">
 
-                <div className="text-center mb-10">
-                  <p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>A Royal Tribute</p>
-                  <h2 className="text-4xl md:text-5xl mt-3">Why You Are So Special</h2>
-                </div>
+<div className="rounded-[2rem] p-4 gold-border bg-white/70 royal-card">
 
-                <div className="grid md:grid-cols-3 gap-6">
+<div className="rounded-[1.5rem] p-8 bg-gradient-to-br from-pink-200 via-rose-200 to-pink-300 min-h-[420px] flex flex-col justify-between">
 
-                  {cards.map(c=> (
+<div>
 
-                    <div key={c.title} className="p-6 rounded-3xl bg-white/70 gold-border royal-glow">
-                      <div className="text-4xl mb-3">{c.icon}</div>
-                      <h3 className="text-2xl">{c.title}</h3>
-                      <p className="mt-2 text-[#7a4b66]" style={{fontFamily:'Arial'}}>{c.text}</p>
-                    </div>
+<div className="flex justify-between text-xs uppercase tracking-widest" style={{fontFamily:'Arial'}}>
+<span>The Royal Chronicle</span>
+<span>2026</span>
+</div>
 
-                  ))}
+<div className="text-center mt-10">
 
-                </div>
+<div className="text-6xl">👑</div>
 
-              </section>
+<h2 className="text-4xl mt-4">Lady Jasleen</h2>
 
+<p className="mt-4 text-[#6a2c4f]" style={{fontFamily:'Arial'}}>
+A beautiful soul with a glowing positive aura — someone who makes every moment brighter.
+</p>
 
-              <section id="ride" className="mt-24 grid lg:grid-cols-2 gap-8">
+</div>
 
-                <div className="p-8 rounded-3xl bg-gradient-to-br from-pink-100 to-rose-200 gold-border royal-glow">
+</div>
 
-                  <p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>Storybook Scene</p>
+<div className="bg-white/70 rounded-xl p-4 gold-border">
 
-                  <h2 className="text-4xl md:text-5xl mt-3">The Royal Horse Ride</h2>
+<p className="italic text-center" style={{fontFamily:'Arial'}}>
+"May your life always feel like a peaceful royal garden ride — full of beauty, joy and love."
+</p>
 
-                  <p className="mt-4 text-[#7a4b66]" style={{fontFamily:'Arial'}}>
-                    Imagine a golden sunset, palace gardens blooming with flowers, and the sound of gentle horse steps on a quiet path.
-                    You riding through it like the queen of a timeless love story.
-                  </p>
+</div>
 
-                </div>
+</div>
 
-                <div className="p-8 rounded-3xl bg-[#c94f88] text-white royal-glow relative">
+</div>
 
-                  <div className="absolute inset-0 opacity-10 flex items-center justify-center text-[10rem]">🐎</div>
+</section>
 
-                  <p className="uppercase text-xs tracking-[0.35em]" style={{fontFamily:'Arial'}}>For My Queen</p>
 
-                  <h2 className="text-4xl mt-3">What Makes You Magical</h2>
+<section id="tribute" className="mt-24">
 
-                  <div className="mt-6 space-y-3">
+<div className="text-center mb-10">
+<p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>A Royal Tribute</p>
+<h2 className="text-4xl md:text-5xl mt-3">Why You Are So Special</h2>
+</div>
 
-                    {reasons.map(r=>(
-                      <div key={r} className="bg-white/20 rounded-xl p-3" style={{fontFamily:'Arial'}}>
-                        ✨ {r}
-                      </div>
-                    ))}
+<div className="grid md:grid-cols-3 gap-6">
 
-                  </div>
+{cards.map(c=> (
 
-                </div>
+<div key={c.title} className="p-6 rounded-3xl bg-white/70 gold-border royal-card">
+<div className="text-4xl mb-3">{c.icon}</div>
+<h3 className="text-2xl">{c.title}</h3>
+<p className="mt-2 text-[#7a4b66]" style={{fontFamily:'Arial'}}>{c.text}</p>
+</div>
 
-              </section>
+))}
 
+</div>
 
-              <section className="mt-24 text-center">
+</section>
 
-                <div className="p-10 rounded-3xl bg-white/70 gold-border royal-glow">
 
-                  <p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>Final Note</p>
+<section id="ride" className="mt-24 grid lg:grid-cols-2 gap-8">
 
-                  <h2 className="text-4xl md:text-5xl mt-3">Happy Women's Day Jasleen ❤️</h2>
+<div className="p-8 rounded-3xl bg-gradient-to-br from-pink-100 to-rose-200 gold-border royal-card">
 
-                  <p className="mt-4 text-[#7a4b66] max-w-2xl mx-auto" style={{fontFamily:'Arial'}}>
-                    The world feels brighter because of your positivity, your beauty and your graceful spirit.
-                  </p>
+<p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>A Bridgerton Moment</p>
 
-                  <div className="mt-6 text-lg font-semibold text-pink-600">
-                    — Made with love by Daljeet 💐
-                  </div>
+<h2 className="text-4xl md:text-5xl mt-3">The Royal Horse Ride</h2>
 
-                </div>
+<p className="mt-4 text-[#7a4b66]" style={{fontFamily:'Arial'}}>
+Imagine a golden sunset over palace gardens, soft music in the air, and a peaceful horse ride through blooming paths — just like a scene from Bridgerton.
+</p>
 
-              </section>
+</div>
 
-            </main>
+<div className="p-8 rounded-3xl bg-[#c94f88] text-white royal-card relative">
 
-          </div>
-        )
-      }
+<div className="absolute inset-0 opacity-10 flex items-center justify-center text-[10rem]">🐎</div>
 
-      ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+<p className="uppercase text-xs tracking-[0.35em]" style={{fontFamily:'Arial'}}>For My Queen</p>
 
-    </script>
+<h2 className="text-4xl mt-3">What Makes You Magical</h2>
 
-  </body>
+<div className="mt-6 space-y-3">
+
+{compliments.map(r=> (
+<div key={r} className="bg-white/20 rounded-xl p-3" style={{fontFamily:'Arial'}}>
+✨ {r}
+</div>
+))}
+
+</div>
+
+</div>
+
+</section>
+
+
+<section className="mt-24 text-center">
+
+<div className="p-10 rounded-3xl bg-white/70 gold-border royal-card">
+
+<p className="uppercase text-xs tracking-[0.35em] text-pink-500" style={{fontFamily:'Arial'}}>A Final Note</p>
+
+<h2 className="text-4xl md:text-5xl mt-3">Happy Women's Day Jasleen ❤️</h2>
+
+<p className="mt-4 text-[#7a4b66] max-w-2xl mx-auto" style={{fontFamily:'Arial'}}>
+Like the heroines of Bridgerton, you carry beauty, charm and a graceful presence that makes the world feel brighter.
+</p>
+
+<div className="mt-6 text-lg font-semibold text-pink-600">
+— With love, Daljeet 💐
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+</div>
+
+)
+}
+
+ReactDOM.createRoot(document.getElementById("root")).render(<App />)
+
+</script>
+
+</body>
 </html>
